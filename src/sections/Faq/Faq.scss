@@ -1,0 +1,30 @@
+.faq-section {
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .accordion-item {
+        .accordion-header {
+           .accordion-button {
+                font-weight: 600;
+           }
+        }
+    }
+    .accordion-body ul {
+        list-style-type: disc; /* Usa puntos para los ítems de la lista */
+        margin: 0; /* Elimina el margen por defecto */
+        padding-left: 20px; /* Añade espacio a la izquierda para los puntos */
+    }
+    
+    .accordion-body li {
+        margin-bottom: 10px; /* Espacio entre los ítems de la lista */
+    }
+}
+
+// Mobile Responsive
+@media (max-width: 575px) {
+    .faq-section {
+        padding-bottom: 50px;
+    }
+}

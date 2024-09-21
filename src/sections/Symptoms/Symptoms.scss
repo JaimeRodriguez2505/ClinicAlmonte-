@@ -1,0 +1,51 @@
+@import '../../sass/colors.scss';
+
+.symptoms-section {
+    margin-top: 150px;
+    background: #FADBE2;
+
+    .section-title {
+        text-align: center;
+
+        p {
+            max-width: 700px;
+            margin: auto;
+        }
+    }
+
+}
+
+// Mobile Responsive
+@media (max-width:575px){
+    .symptoms-section {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width:576px) and (max-width: 767px){
+    .symptoms-section {
+        margin-top: 50px;
+    }
+}
+
+.separator {
+    height: 2px; /* Altura de la barra */
+    background-color: black; /* Color de la barra */
+    margin: 20px 0; /* Espacio arriba y abajo de la barra */
+  }
+
+.backback {
+    background-color: rgba(0, 123, 255, 0.2); // Celeste claro con transparencia (mantén este que te gustó)
+    border-radius: 5%;
+}
+
+.backback1 {
+    background-color: rgba(0, 87, 158, 0.2); // Azul oscuro elegante con transparencia
+    border-radius: 5%;
+}
+
+.backback2 {
+    background-color: rgba(173, 216, 230, 0.3); // Azul muy claro y suave
+    border-radius: 5%;
+}
+

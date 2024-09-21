@@ -1,0 +1,108 @@
+.page-title {
+    padding: 60px 20px; // Mayor padding para resaltar el área del título
+    background-color: #f9f9f9; // Color de fondo más suave
+    text-align: center;
+    border-bottom: 2px solid #ddd; // Línea de separación inferior
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.libros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; // Espacio entre tarjetas
+    justify-content: center;
+    padding: 20px 0; // Espacio adicional arriba y abajo
+}
+
+.libro {
+    flex: 1 1 calc(25% - 20px); // Aumenta el tamaño de las tarjetas en pantallas grandes
+    max-width: 1200px; // Aumenta el ancho máximo de las tarjetas
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: 0 auto; // Centra los libros horizontalmente
+    
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.libro-foto {
+    width: auto;
+    height: auto; // Aumenta la altura de las imágenes
+    object-fit: contain; // Asegura que la imagen se muestre completa sin recortarse
+    background-color: #f0f0f0; // Color de fondo para asegurar visibilidad si la imagen no llena el contenedor
+
+    &:hover {
+        opacity: 0.9; // Ligera reducción de opacidad al pasar el mouse
+        transform: scale(1.02); // Ligera escala para efecto visual
+    }
+}
+
+.libro-titulo {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+    font-weight: 600; // Negrita mejorada
+    letter-spacing: 0.5px; // Espaciado de letras para una mejor legibilidad
+}
+
+.libro-descripcion {
+    font-size: 1.1em;
+    color: #555; // Color de texto ajustado para mejor contraste
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 1.6; // Mayor altura de línea para una lectura más cómoda
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width: 1200px) {
+    .libro {
+        flex: 1 1 calc(33.333% - 20px); // Reduce el ancho flexible para pantallas medianas
+        max-width: 700px; // Ajusta el ancho máximo
+    }
+
+    .libro-foto {
+        height: 600px; // Ajusta la altura de las imágenes
+    }
+}
+
+@media (max-width: 900px) {
+    .libro {
+        flex: 1 1 calc(50% - 20px); // Reduce el ancho flexible para pantallas más pequeñas
+        max-width: 500px; // Ajusta el ancho máximo
+    }
+
+    .libro-foto {
+        height: 00px; // Ajusta la altura de las imágenes
+    }
+}
+
+@media (max-width: 600px) {
+    .libro {
+        flex: 1 1 calc(100% - 20px); // Ocupa el ancho completo para pantallas pequeñas
+        max-width: 400px; // Ajusta el ancho máximo
+    }
+
+    .libro-foto {
+        height: 400px; // Ajusta la altura de las imágenes
+    }
+
+    .libro-titulo {
+        font-size: 1.2em; // Ajusta el tamaño del texto para pantallas pequeñas
+    }
+
+    .libro-descripcion {
+        font-size: 1em; // Ajusta el tamaño del texto para pantallas pequeñas
+    }
+}
